@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Fashion Icon - Shop Online</title>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <!-- Sales alert badge -->
+      <div class="alert alert-success text-center m-0" role="alert">
+        <h5>BIG SALE! 30% OFF ON ALL ITEMS!</h5>
+        <i class="fa-solid fa-xmark" id="alert-close"></i>
+      </div>
+
+      <!-- Nav bar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+        <a class="navbar-brand" href="#">
+          <img src="./assests/images/logo3.jpg" alt="Fashion Icon" width="120" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse d-none d-lg-flex justify-content-between"
+        >
+          <ul class="navbar-nav fs-5 fw-bold">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Category</a></li>
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#"
+                >Flash Sale
+                <div class="position-absolute translate-middle badge">Hot</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          </ul>
+          <ul class="navbar-nav fs-5">
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="fas fa-search fs-3"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a
+                target="_blank"
+                class="nav-link position-relative"
+                href="./favourites.html"
+                ><i class="far fa-heart fs-3"></i
+                ><span class="badge heart-badge">0</span></a
+              >
+            </li>
+            <li class="nav-item cart-div">
+              <a
+                target="_blank"
+                class="nav-link position-relative"
+                href="./cart.html"
+                ><i class="fas fa-shopping-bag fs-3"></i
+                ><span class="badge cart-badge">0</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Offcanvas for small screens -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasLabel">Menu</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Category</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Flash Sale</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- hero section -->
+
+    <div class="hero-section">
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active hero hero-1">
+            <h1>Premium Mens Collection</h1>
+            <h3>Shop the Collection & Elevate Your Style</h3>
+            <a href="#" class="hero-btn" role="button">Shop Now</a>
+            <img src="./assests/images/hero 1.png" alt="img" />
+          </div>
+          <div class="carousel-item hero hero-2">
+            <h1>Premium Women Collection</h1>
+            <h3>Shop the Collection & Elevate Your Style</h3>
+            <a href="#" class="hero-btn" role="button">Shop Now</a>
+            <img src="./assests/images/women hero 2.png" alt="img" />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="customer-satisfaction mt-5 mb-5">
+      <div class="container-fluid">
+        <div class="row customer">
+          <div class="col-md-3 customer-satisfaction-card">
+            <img src="./assests/images/icons/free shipping.png" alt="images" />
+            <div class="customer-satisfaction-card-info">
+              <h4 class="text-center">Free Shipping </h4>
+              <p>
+                On all orders over $75.00
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 customer-satisfaction-card">
+            <img src="./assests/images/icons/free returns.png" alt="images" />
+            <div class="customer-satisfaction-card-info">
+              <h4 class="text-center">Free Returns</h4>
+              <p >
+                Returns are free within 9 days
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 customer-satisfaction-card">
+            <img src="./assests/images/icons/secure Payment.png" alt="images" />
+            <div class="customer-satisfaction-card-info">
+              <h4 class="text-center">100% Payment Secure</h4>
+              <p>
+                Your payment are safe with us.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 customer-satisfaction-card">
+            <img src="./assests/images/icons/support.png" alt="images" />
+            <div class="customer-satisfaction-card-info">
+              <h4 class="text-center">Support 24/7</h4>
+              <p>
+                Contact us 24 hours a day
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Men's Collection Section -->
+    <div class="men-section-heading">
+      <h1>Men's Collection</h1>
+      <p>
+        The most prominent product in the store, which was bought with the
+        highest number
+      </p>
+    </div>
+
+    <div class="men-section">
+      <div class="men-section-pre-img">
+        <a href="#" role="button" class="men-section-btn">Shop Now</a>
+        <img src="./assests/images/hero 1.png" alt="image" />
+      </div>
+      <div class="men-section-slider-container">
+        <button class="slider-btn prev-btn" id="prevMen">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="men-slider">
+          <!-- Products dynamically added here -->
+          <!-- testing card -->
+        </div>
+        <button class="slider-btn next-btn" id="nextMen">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Women's Collection Section -->
+    <div class="women-section-heading">
+      <h1>Women's Collection</h1>
+      <p>
+        The most prominent product in the store, which was bought with the
+        highest number
+      </p>
+    </div>
+
+    <div class="women-section">
+      <div class="women-section-pre-img">
+        <a href="#" role="button" class="men-section-btn">Shop Now</a>
+        <img src="./assests/images/women hero 2.png" alt="image" />
+      </div>
+      <div class="women-section-slider-container">
+        <button class="slider-btn prev-btn" id="prevWomen">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="women-slider">
+          <!-- Product cards added here dynamically -->
+        </div>
+        <button class="slider-btn next-btn" id="nextWomen">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- customer reviews -->
+
+    <!-- popular products heading -->
+    <div class="men-section-heading">
+      <h1>Popular Collection</h1>
+      <p>
+        The most prominent product in the store, which was bought with the
+        highest number
+      </p>
+    </div>
+
+    <!-- popular product in the store -->
+
+    <div class="popular-section">
+      <!-- card 1 -->
+      <div class="popular-product-card">
+        <div class="popular-badge popular">Popular</div>
+        <div class="popular-product-image">
+          <img
+            src="./assests/images/products/product 5.jpg"
+            alt="Product Image"
+          />
+          <div class="popular-hover-overlay">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        <div class="popular-product-info">
+          <h3 class="popular-product-title">
+            Essentials 3-Stripes Animal Print High Pile Cropped 1/4 Zip Top
+          </h3>
+          <div class="popular-product-rating">
+            <span>⭐⭐⭐⭐⭐</span>
+          </div>
+          <p class="popular-product-price">$70</p>
+        </div>
+        <div class="popular-actions">
+          <button class="popular-add-to-cart">Add to cart</button>
+          <div class="popular-favourite">
+            <i class="fas fa-heart"></i>
+          </div>
+        </div>
+      </div>
+      <!-- card 2 -->
+      <div class="popular-product-card">
+        <div class="popular-badge popular">Popular</div>
+        <div class="popular-product-image">
+          <img
+            src="./assests/images/products/product 15.jpg"
+            alt="Product Image"
+          />  
+          <div class="popular-hover-overlay">
+            <i class="fas fa-search"></i>
+          </div>
+          
+        </div>
+        <div class="popular-product-info">
+          <h3 class="popular-product-title">Own the Run Jacket</h3>
+          <div class="popular-product-rating">
+            <span>⭐⭐⭐⭐⭐</span>
+          </div>
+          <p class="popular-product-price">$35</p>
+        </div>
+        <div class="popular-actions">
+          <button class="popular-add-to-cart">Add to cart</button>
+          <div class="popular-favourite">
+            <i class="fas fa-heart"></i>
+          </div>
+        </div>
+      </div>
+      <!-- card 3 -->
+      <div class="popular-product-card">
+        <div class="popular-badge popular">Popular</div>
+        <div class="popular-product-image">
+          <img
+            src="./assests/images/products/product 10.jpg"
+            alt="Product Image"
+          />
+          <div class="popular-hover-overlay">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        <div class="popular-product-info">
+          <h3 class="popular-product-title">Graphics Cloudy Trefoil Hoodie</h3>
+          <div class="popular-product-rating">
+            <span>⭐⭐⭐⭐⭐</span>
+          </div>
+          <p class="popular-product-price">$36</p>
+        </div>
+        <div class="popular-actions">
+          <button class="popular-add-to-cart">Add to cart</button>
+          <div class="popular-favourite">
+            <i class="fas fa-heart"></i>
+          </div>
+        </div>
+      </div>
+      <!-- card 4 -->
+      <div class="popular-product-card">
+        <div class="popular-badge popular">Popular</div>
+        <div class="popular-product-image">
+          <img
+            src="./assests/images/products/product 1.jpg"
+            alt="Product Image"
+          />
+          <div class="popular-hover-overlay">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        <div class="popular-product-info">
+          <h3 class="popular-product-title">Own The Run Long Sleeve Tee</h3>
+          <div class="popular-product-rating">
+            <span>⭐⭐⭐⭐⭐</span>
+          </div>
+          <p class="popular-product-price">$45</p>
+        </div>
+        <div class="popular-actions">
+          <button class="popular-add-to-cart">Add to cart</button>
+          <div class="popular-favourite">
+            <i class="fas fa-heart"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- From the blog section -->
+
+    <div class="container-fluid mb-4">
+      <h1 class="text-center p-4 blog-heading">From the Blogs</h1>
+
+      <div class="blog-container">
+        <!-- card 1 -->
+        <div class="blog-card">
+          <div class="blog-img">
+            <img src="./assests/images/flash slaes.jpeg" alt="blog-img" />
+          </div>
+          <div class="blog-info">
+            <h3>FLASH SALE 50% OFF</h3>
+            <p><small>Posted on: 7th August, 2024</small></p>
+            <div class="button-container">
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="blog-card">
+          <div class="blog-img">
+            <img src="./assests/images/new arrival.jpeg" alt="blog-img" />
+          </div>
+          <div class="blog-info">
+            <h3>New Arrivals</h3>
+            <p><small>Posted on: 2nd October, 2024</small></p>
+            <div class="button-container">
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div class="blog-card">
+          <div class="blog-img">
+            <img src="./assests/images/money back blog.jpeg" alt="blog-img" />
+          </div>
+          <div class="blog-info">
+            <h3>Money Back Gaurantee</h3>
+            <p><small>Posted on: 10th August, 2024</small></p>
+            <div class="button-container">
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+        </div>
+        <!-- card 4 -->
+        <div class="blog-card">
+          <div class="blog-img">
+            <img
+              src="./assests/images/premium article lauch.jpeg"
+              alt="blog-img"
+            />
+          </div>
+          <div class="blog-info">
+            <h3>Newly Premium Launch</h3>
+            <p><small>Posted on: 14th August, 2024</small></p>
+            <div class="button-container">
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer for links -->
+
+    <div class="container-fluid bg-black">
+      <div class="row">
+        <div class="col-md-3 p-4 mt-4 mb-4">
+          <!-- about us -->
+          <div class="row">
+            <div class="col-12 text-center">
+              <img
+                src="./assests/images/logo3.jpg"
+                class="footer-logo"
+                alt="logo"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-white">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+              tenetur voluptates eos neque quas, error tempora quisquam
+              blanditiis amet quam ducimus exercitationem. Exercitationem
+              temporibus eligendi culpa! Accusamus veniam inventore libero.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 p-4 p-4 mt-4 mb-4">
+          <!-- Information -->
+          <div class="row">
+            <div class="col-12 ms-4 text-white">
+              <h3>Information</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-white">
+              <ul class="Information-list mt-5">
+                <li><a href="#">Delivery</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Secure Payment</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Stores</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 p-4 p-4 mt-4 mb-4">
+          <!-- Custom Links -->
+          <div class="row">
+            <div class="col-12 ms-4 text-white">
+              <h3>Custom Links</h3>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 text-white">
+              <ul class="Custom-list mt-5">
+                <li><a href="#">Delivery</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Secure Payment</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Stores</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 p-4 p-4 mt-4 mb-4">
+          <!-- social media links -->
+          <div class="row">
+            <div class="col-12 text-white">
+              <h3>Our Social Links</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 mt-5">
+              <i class="fa-brands fa-facebook-f text-white fs-4 m-2"></i>
+              <i class="fa-brands fa-instagram text-white fs-4 m-2"></i>
+              <i class="fa-brands fa-twitter text-white fs-4 m-2"></i>
+              <i class="fa-brands fa-youtube text-white fs-4 m-2"></i>
+              <i class="fa-brands fa-pinterest text-white fs-4 m-2"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid main-footer bg-dark">
+      <div class="row footer-row">
+        <div class="col-md-4 text-white">
+          Copyright © Fashion Icon. All Rights Reserved.
+        </div>
+        <div class="col-md-4 text-end text-white">
+          <i class="fa-brands fa-cc-visa fs-3 m-2"></i>
+          <i class="fa-brands fa-cc-mastercard fs-3 m-2"></i>
+          <i class="fa-brands fa-stripe fs-3 m-2"></i>
+          <i class="fa-brands fa-cc-paypal fs-3 m-2"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer nav for small screens -->
+    <footer class="mobile-footer d-lg-none">
+      <ul class="nav d-flex justify-content-around">
+        <li>
+          <a href="#"><i class="fas fa-home"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="far fa-heart"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-shopping-bag"></i></a>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- Notification Card -->
+    <div class="popup-notification" id="notification">
+      <div class="notification-header">
+        <span>Someone has purchased</span>
+        <button class="close-btn" onclick="closePopup()">×</button>
+      </div>
+      <div class="notification-content">
+        <img
+          src="./assests/images/products/product 5.jpg"
+          alt="Sneakers"
+          class="product-image"
+          id="notify-product-img"
+        />
+        <div class="product-info">
+          <h4 class="notify-product-title">Essentials 3-Stripes</h4>
+          <p id="time-ago">13 minutes ago</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- proceed to payment pop-up -->
+
+    <div class="container-fluid proceed-pop-up">
+      <div class="lg-container pop-up bg-light">
+        <div class="row">
+          <div class="col-12 mb-3">
+            <h4 class="text-center fw-bold fs-3 p2">
+              Product successfully added to your shopping cart
+            </h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 d-flex justify-content-center">
+            <div class="pop-up-img text-center mt-2">
+              <img
+                class="pop-img"
+                src="./assests/images/products/product 5.jpg"
+                alt="image"
+              />
+            </div>
+            <div class="pop-up-details">
+              <p class="pop-up-title">Title</p>
+              <p class="pop-up-price">Price:$</p>
+              <p class="pop-up-size">Size:XL</p>
+              <p class="pop-up-qty">Quantity:1</p>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex flex-column">
+            <a class="pop-up-btn pop-up-close" href="./index.html"
+              >Continue Shopping</a
+            >
+            <a class="pop-up-btn pop-up-close" href="./cart.html"
+              >Proceed to Checkout</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script files -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/cart.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

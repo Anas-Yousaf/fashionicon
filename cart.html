@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/cart.css" />
+    <title>My cart</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- main page row parent -->
+      <div class="row p-0 m-0">
+        <!-- heading -->
+        <div class="row p-0 m-0">
+          <div class="col-12 shopping-cart-banner">
+            <img src="./assests/images/women hero 2.png" alt="banner img" />
+            <img src="./assests/images/hero 1.png" alt="banner img" />
+            <h1>Shopping Cart</h1>
+          </div>
+        </div>
+        <div class="row mt-4 p-0">
+          <div class="col-lg-8 shopping-cart-items">
+            <!-- Empty cart icon (hidden by default) -->
+            <div class="empty-cart-icon text-center">
+              <i class="fas fa-shopping-cart"></i>
+              <p>Your cart is empty</p>
+            </div>
+
+            <!-- the cart products is shown here -->
+            <div class="cart-item-fields">
+              <h5 class="item-field">Item</h5>
+              <h5 class="price-field">Price</h5>
+              <h5 class="qty-field">Qty</h5>
+              <h5 class="total-price-field">Total Price</h5>
+              
+            </div>
+            <hr class="ruler">
+            <!-- cart item 1 -->
+            <!-- <div class="cart-item">
+              <div class="item-pic">
+                <img src="assests/images/women products/product 5.jpg" alt="" />
+                <div class="item-title">
+                  <h6>Essentials 3-Stripes</h6>
+                  <p>Size: XL</p>
+                </div>
+              </div>
+              <div class="item-price">
+                <p>$70</p>
+              </div>
+              <div class="item-qty d-flex">
+                <input value="1" type="number" >
+              </div>
+              <div class="item-total-price">
+                $70
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </div> -->
+
+            <!-- cart item 2 -->
+
+            <!-- items card are here dynamically -->
+          </div>
+          <div class="col-lg-4 checkout mt-1 mb-4">
+            <!-- the checkout form is display here -->
+            <div class="row">
+              <div class="col-12 p-3">
+                <h4>Promotion Code</h4>
+              </div>
+            </div>
+            <hr />
+            <div class="row p-3">
+              <form class="d-flex" action="">
+                <input class="col-7 me-3 pt-2 pb-2 ps-3" type="text" />
+                <button class="col-4 fw-bold">Apply</button>
+              </form>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-12 d-flex justify-content-between ps-4 pe-5">
+                <p class="checkout-item-qty">1 items</p>
+                <p class="checkout-item-total">$70</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 d-flex justify-content-between ps-4 pe-5">
+                <p>Shipping</p>
+                <p class="checkout-shipping-rate">$7</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 d-flex justify-content-between ps-4 pe-5">
+                <p>Total (tax excl.)</p>
+                <p class="checkout-total-tax-ex">$77</p>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-12 d-flex justify-content-between ps-4 pe-5">
+                <p class="fw-bold">Total (tax incl.)</p>
+                <p class="checkout-total-tax-in fw-bold">$77</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <p class="ms-3">Taxes: $0</p>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <button class="col-10 p-3 fw-bold">Proceed To Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/cart.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

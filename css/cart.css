@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  
+
+
+  /* banner */
+  .shopping-cart-banner {
+    background-color: #fff4ff;
+  }
+
+  .shopping-cart-banner img:nth-child(2) {
+    width: 100px;
+    float: right;
+  }
+  .shopping-cart-banner img:nth-child(1) {
+    width: 100px;
+    float: left;
+  }
+
+  .shopping-cart-banner h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+
+  /* shopping-cart-items */
+  
+
+  .cart-item-fields {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 30px;
+  }
+  .cart-item-fields h5 {
+    padding: 20px;
+    font-weight: 600;
+  }
+  .item-field {
+    width: 40%;
+  }
+  .price-field {
+    width: 20%;
+  }
+  .qty-field {
+    width: 20%;
+  }
+  .total-price-field {
+    width: 20%;
+  }
+
+
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .item-pic {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .item-title {
+    width: 50%;
+  }
+ 
+  .item-pic img{
+    width: inherit;
+  }
+  .item-price {
+    width: 20%;
+    padding: 25px;
+  }
+  .item-qty {
+    width: 20%;
+    padding: 25px;
+  }
+  .item-qty input {
+    width: 40px;
+  }
+  .item-total-price {
+    width: 20%;
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+
+  /* checkout */
+
+  .checkout {
+    border: 1px solid grey;
+    padding-block: 20px;
+  }
+
+  .grey {
+    background-color: grey;
+  }
+
+  .checkout button {
+    border: none;
+    background-image: linear-gradient(90deg, #ff9a9e 0%, #fecfef 100%);
+  }
+
+
+/* Enhance scrollbar for .shopping-cart-items */
+.shopping-cart-items {
+  height: 90vh;
+  overflow-y: auto;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #ff9a9e #fecfef; /* Scrollbar colors */
+}
+
+/* Scrollbar for WebKit browsers (Chrome, Safari) */
+.shopping-cart-items::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+}
+
+.shopping-cart-items::-webkit-scrollbar-thumb {
+  background-color: #ff9a9e; /* Thumb color */
+  border-radius: 10px; /* Rounded corners for scrollbar thumb */
+  border: 2px solid #fecfef; /* Add padding between the thumb and the scroll track */
+}
+
+.shopping-cart-items::-webkit-scrollbar-track {
+  background-color: #fecfef; /* Scrollbar track color */
+  border-radius: 10px;
+}
+ 
+
+
+
+
+
+/* Empty cart icon styles */
+.empty-cart-icon {
+  display: none;
+  font-size: 50px;
+  color: #ff9a9e;
+  padding: 20px;
+}
+
+.empty-cart-icon p {
+  font-size: 20px;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Add animation */
+.empty-cart-icon i {
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}

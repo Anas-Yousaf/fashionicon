@@ -1,0 +1,227 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+
+.fav-product-section-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+/* banners */
+
+.fav-banner {
+  width: 100%;
+  height: 30rem;
+}
+
+
+
+.favourite-product-heading {
+  position: relative;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.favourite-product-heading::after {
+  content: ' ';
+  position: absolute;
+  height: 10px;
+  width: 15%;
+  background-image: var(--line);
+  top: 80px;
+  transition: width 0.5s ease;
+}
+
+.favourite-product-heading:hover::after {
+  width: 25%;
+}
+
+
+
+
+
+
+/* Favourite  product cards new */
+.fav-product-card {
+  width: 250px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.fav-product-card:hover {
+  transform: translateY(-5px);
+}
+
+
+
+
+
+/* Product Image & Hover Effect */
+.fav-product-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.fav-product-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.fav-product-image:hover img {
+  transform: scale(1.1);
+}
+
+/* Magnifying Glass Overlay */
+.fav-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  
+}
+
+.fav-product-image:hover .fav-hover-overlay {
+  opacity: 1;
+}
+
+.fav-hover-overlay i {
+  color: white;
+  font-size: 30px;
+}
+
+/* Product Info */
+.fav-product-info {
+  margin: 15px 0;
+}
+
+.fav-product-title {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  margin: 10px 0;
+  height: 40px;
+  overflow: hidden;
+}
+
+.fav-product-rating {
+  color: #ffca28;
+}
+
+.fav-product-price {
+  font-size: 18px;
+  color: #333;
+  margin: 5px 0;
+}
+
+/* Add to Cart & Favourite */
+.fav-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.fav-add-to-cart {
+  background-color: #ff4081;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.fav-add-to-cart:hover {
+  background-color: #e91e63;
+}
+
+/* Heart Icon for Favourites */
+.fav-favourite {
+  margin-left: 10px;
+  color: #ff4081;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.fav-favourite i:hover {
+  color: #e91e63;
+}
+
+/* Ensuring all cards are the same size */
+.fav-product-card {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fav-product-title {
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+
+/* Empty favourite section */
+
+
+
+.empty-fav-icon {
+  display: none;
+  font-size: 50px;
+  color: #ff9a9e;
+  padding: 20px;
+  
+}
+
+.empty-fav-icon p {
+  font-size: 20px;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Add animation */
+.empty-fav-icon i {
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
